@@ -119,7 +119,7 @@ def is_reducible(s: str, hash_table: list, hash_memo: list) -> bool:
     """
     if find_word(s, hash_memo):
         return True
-    if s in {"a", "i", "o", "u"}:  # Base cases
+    if s in {"a", "i", "o", "u", "e"}:  # Base cases
         insert_word(s, hash_memo)
         return True
     if not find_word(s, hash_table):
